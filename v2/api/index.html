@@ -1506,7 +1506,7 @@
 <p><code>ref</code> 被用来给元素或子组件注册引用信息。引用信息将会注册在父组件的 <code>$refs</code> 对象上。如果在普通的 DOM 元素上使用，引用指向的就是 DOM 元素; 如果用在子组件上，引用就指向组件实例:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- vm.$refs.p will be the DOM node --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">ref</span>=<span class="string">"p"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- vm.$refs.child will be the child comp instance --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">child-comp</span> <span class="attr">ref</span>=<span class="string">"child"</span>&gt;</span><span class="tag">&lt;/<span class="name">child-comp</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>当 <code>v-for</code> 用于元素或组件的时候，引用信息将是包含 DOM 节点或组件实例的数组。</p>
-<p>关于ref注册时间的重要说明: 因为ref本身是作为渲染结果被创建的，在初始渲染的时候你不能访问它们 - 它们还不存在！<code>$refs</code> 也不是响应式的，因此你不应该试图用它在模版中做数据绑定。</p>
+<p>关于ref注册时间的重要说明: 因为ref本身是作为渲染结果被创建的，在初始渲染的时候你不能访问它们 - 它们还不存在！<code>$refs</code> 也不是响应式的，因此你不应该试图用它在模板中做数据绑定。</p>
 </li>
 <li><p><strong>参考</strong>：<a href="../guide/components.html#子组件索引">子组件 Refs</a></p>
 </li>
@@ -1521,7 +1521,7 @@
 </ul>
 <h3 id="is"><a href="#is" class="headerlink" title="is"></a>is</h3><ul>
 <li><p><strong>预期</strong>：<code>string</code></p>
-<p>用于<a href="../guide/components.html#动态组件">动态组件</a>且基于<a href="../guide/components.html#DOM 模版解析说明">DOM 内模板到限制</a>来工作。</p>
+<p>用于<a href="../guide/components.html#动态组件">动态组件</a>且基于<a href="../guide/components.html#DOM 模板解析说明">DOM 内模板到限制</a>来工作。</p>
 <p>示例：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- component changes when currentView changes --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">component</span> <span class="attr">v-bind:is</span>=<span class="string">"currentView"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- necessary because `&lt;my-row&gt;` would be invalid inside --&gt;</span></div><div class="line"><span class="comment">&lt;!-- a `&lt;table&gt;` element and so would be hoisted out      --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">tr</span> <span class="attr">is</span>=<span class="string">"my-row"</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>更多的使用细节，请移步至下面的链接。</p>
@@ -1529,7 +1529,7 @@
 <li><p><strong>See also</strong>：</p>
 <ul>
 <li><a href="../guide/components.html#动态组件">动态组件</a></li>
-<li><a href="../guide/components.html#DOM 模版解析说明">DOM 模版解析说明</a></li>
+<li><a href="../guide/components.html#DOM 模板解析说明">DOM 模板解析说明</a></li>
 </ul>
 </li>
 </ul>
